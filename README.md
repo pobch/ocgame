@@ -13,5 +13,5 @@ You must have Node.js installed in your computer
 3. Test
    `yarn test`
 
-Note: If your terminal/command cannot display text's background color,
+**Note**: If your terminal/command cannot display text's background color,
 use `yarn start-nocolor` instead of `yarn start`.
