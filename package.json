@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "jest": "^24.8.0"
+  },
+  "name": "ocgame",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Pob",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "start-nocolor": "node indexNoColor.js",
+    "test": "jest"
+  }
+}
