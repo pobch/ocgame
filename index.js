@@ -8,12 +8,12 @@ const readline = require('readline').createInterface({
 })
 
 // When it is AI's turn to guess
-const aiTurn = next => {
+const aiTurn = () => {
   console.log("\x1b[46m===== AI's turn to guess =====\x1b[0m")
   readline.question('Your input: ', text => {
     const lowerText = text.toLowerCase()
     if (!validate2Chars(lowerText)) {
-      return aiTurn(humanTurn)
+      return aiTurn()
     }
     const aiGuess = aiRandom(true)
     const guessingResult = isCorrectGuessing(aiGuess, lowerText)
@@ -28,17 +28,17 @@ const aiTurn = next => {
       readline.close()
       return
     }
-    return next(aiTurn)
+    return humanTurn()
   })
 }
 
 // When it is Human's turn to guess
-const humanTurn = next => {
+const humanTurn = () => {
   console.log('\x1b[44m===== Your turn to guess =====\x1b[0m')
   readline.question('Your guess: ', text => {
     const lowerText = text.toLowerCase()
     if (!validate3Chars(lowerText)) {
-      return humanTurn(aiTurn)
+      return humanTurn()
     }
     const aiInput = aiRandom()
     const guessingResult = isCorrectGuessing(lowerText, aiInput)
@@ -53,9 +53,9 @@ const humanTurn = next => {
       readline.close()
       return
     }
-    return next(humanTurn)
+    return aiTurn()
   })
 }
 
 // start the game
-humanTurn(aiTurn)
+humanTurn()

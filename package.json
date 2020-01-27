@@ -9,7 +9,6 @@
   "license": "MIT",
   "scripts": {
     "start": "node index.js",
-    "start-nocolor": "node indexNoColor.js",
     "test": "jest"
   }
 }
