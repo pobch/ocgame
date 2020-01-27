@@ -1,6 +1,6 @@
 // Function for AI to random either 'o' or 'c'.
 // The 3rd character is a random number which is optional.
-exports.aiRandom = (isAiGuessing = false) => {
+export function aiRandom(isAiGuessing = false) {
   let result = ''
   // first 2 char
   for (let i = 0; i < 2; i++) {

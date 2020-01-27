@@ -1,8 +1,9 @@
-const { validate2Chars, validate3Chars, isCorrectGuessing } = require('./validator')
-const { aiRandom } = require('./ai')
+import { validate2Chars, validate3Chars, isCorrectGuessing } from './validator.js'
+import { aiRandom } from './ai.js'
 
 // Set up readline to receive text input from terminal
-const readline = require('readline').createInterface({
+import rl from 'readline'
+const readline = rl.createInterface({
   input: process.stdin,
   output: process.stdout
 })

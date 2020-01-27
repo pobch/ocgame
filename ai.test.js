@@ -1,4 +1,4 @@
-const { aiRandom } = require('./ai')
+import { aiRandom } from './ai'
 
 describe("AI's random function", () => {
   describe('Random 2 characters', () => {

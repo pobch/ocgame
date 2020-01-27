@@ -1,11 +1,17 @@
-const {
+import {
   validateTextLength,
   validateOC,
   validateNum,
   validate2Chars,
   validate3Chars,
   isCorrectGuessing
-} = require('./validator')
+} from './validator'
+
+const spy = jest.spyOn(console, 'log').mockImplementation()
+
+afterAll(() => {
+  spy.mockRestore()
+})
 
 describe('Function to validate text length', () => {
   it('supports 2 character validation', () => {

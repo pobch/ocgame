@@ -81,7 +81,7 @@ const isCorrectGuessing = (guessInput, anotherPlayerInput) => {
   return false
 }
 
-module.exports = {
+export {
   validateTextLength,
   validateOC,
   validateNum,
